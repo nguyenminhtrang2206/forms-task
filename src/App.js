@@ -11,31 +11,36 @@ class App extends Component {
     lastname:"",
     phonenumber:"",
     message:"",
-    role:""
+    role:"",
   }
 
-  changeHandler= (event) =>{
+  changeHandler = (event) =>{
     this.setState({
-      [event.target.name]: event.target.value
-    })
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  popupHandler = (event) => {
+    event.preventDefault();
+    this.setState({ showPopup: true })
   }
 
   render() {
+    const props = {
+      first: this.state.firstname,
+      last: this.state.lastname,
+      phone: this.state.phonenumber,
+      message: this.state.message,
+      role: this.state.role
+    }
     return (
-      <div>
+      <div className="max-width">
         <Form 
         change = {this.changeHandler}
+        submit = {this.popupHandler}
         />
-        <View 
-        first={this.state.firstname}
-        last={this.state.lastname}
-        phone={this.state.phonenumber}
-        message={this.state.message}
-        role={this.state.role}
-        />
-        <Popup 
-        popup={this.state.showPopup}
-        />
+        <View {...props} />
+        {this.state.showPopup && <Popup {...props}/>}
 
       </div>
     );
