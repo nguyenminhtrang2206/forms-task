@@ -16,6 +16,14 @@ h1 {
   padding-top: 2rem;
 }
 
+.max-width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
 /* Form styling */
 form {
   display: flex;
@@ -157,4 +165,8 @@ select {
   cursor: pointer;
   background-color: rgb(52, 66, 26);
   color: whitesmoke;
+}
+
+.form-area {
+  display: flex;
 }
