@@ -55,6 +55,7 @@ const Form = ({ change, submit }) => {
             <strong>Role</strong>
           </label>
           <select name="role" id="role" required onChange={change}>
+            <option value="">Choose</option>
             <option value="teacher">Teacher</option>
             <option value="student">Student</option>
             <option value="other">Other</option>

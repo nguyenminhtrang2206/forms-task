@@ -1,8 +1,8 @@
 import React from "react";
 
-const Notes = ({ id, firstname, lastname, phonenumber, message, role }) => {
+const Notes = ({ firstname, lastname, phonenumber, message, role }) => {
   return (
-    <div key={id}>
+    <div className="note-section">
       {firstname} {lastname} {phonenumber} {message} {role}
     </div>
   );
