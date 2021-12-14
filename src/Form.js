@@ -4,7 +4,7 @@ const Form = ({ change, submit }) => {
   return (
     <form onSubmit={submit}>
       <div className="form">
-        <div>
+        <div className="single">
           <label htmlFor="firstname">
             <strong>First name</strong>
           </label>
@@ -17,7 +17,7 @@ const Form = ({ change, submit }) => {
           />
         </div>
 
-        <div>
+        <div className="single">
           <label htmlFor="lastname">
             <strong>Last name</strong>
           </label>
@@ -30,7 +30,7 @@ const Form = ({ change, submit }) => {
           />
         </div>
 
-        <div>
+        <div className="single">
           <label htmlFor="phonenumber">
             <strong>Phone number</strong>
           </label>
@@ -43,14 +43,14 @@ const Form = ({ change, submit }) => {
           />
         </div>
 
-        <div>
+        <div className="single">
           <label htmlFor="message">
             <strong>Message</strong>
           </label>
           <textarea name="message" id="message" required onChange={change} />
         </div>
 
-        <div>
+        <div className="single">
           <label htmlFor="role">
             <strong>Role</strong>
           </label>

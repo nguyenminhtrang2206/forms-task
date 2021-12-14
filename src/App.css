@@ -61,6 +61,11 @@ select {
   margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
+  width: 300px;
+}
+.single {
+  display: flex;
+  flex-direction: column;
 }
 
 /* View styling */
@@ -172,13 +177,21 @@ select {
 
 /* Note section */
 .note-section {
-  background-color: rgb(255, 131, 15);
-  width: 50%;
+  border: 1px solid rgb(255, 131, 15);
+  width: 40%;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 5px #333;
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.note-section p {
+  text-align: center;
+  font-weight: bolder;
 }
 .note {
-  margin: 0.3rem;
+  margin: 0.3rem; 
 }

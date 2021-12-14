@@ -67,6 +67,7 @@ class App extends Component {
           <Popup {...this.state.inputData} post={this.postHandler} />
         )}
         <div className="note-section" >
+          <p>Notes</p>
         {this.state.data.map((note) => (
           <Notes {...note} key={note.id} />
         ))}
